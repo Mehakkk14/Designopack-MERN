@@ -1,0 +1,23 @@
+{
+  "name": "designopack-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DesignOPack MERN Full-Stack Application",
+  "scripts": {
+    "backend:install": "npm --prefix backend install",
+    "frontend:install": "npm --prefix frontend install",
+    "backend:dev": "npm --prefix backend run dev",
+    "frontend:dev": "npm --prefix frontend run dev",
+    "backend:seed": "npm --prefix backend run seed",
+    "backend:start": "npm --prefix backend start"
+  },
+  "keywords": [
+    "mern",
+    "designopack",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "DesignOPack",
+  "license": "ISC"
+}

@@ -1,0 +1,52 @@
+<!-- Facebook Pixel Setup Instructions -->
+<!-- 
+  To enable Facebook Ads Tracking:
+  1. Go to https://business.facebook.com
+  2. Open Events Manager
+  3. Create a new Pixel
+  4. Copy your Pixel ID
+  5. Replace 'YOUR_PIXEL_ID' in the code below
+  6. Add this code to index.html <head> section
+-->
+
+<!-- Facebook Pixel Code (Add to index.html) -->
+<!--
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
+-->
+
+<!-- Track Quote Requests (Add to QuoteModal.tsx after successful submission) -->
+<!--
+if (typeof fbq !== 'undefined') {
+  fbq('track', 'Lead', {
+    content_name: 'Quote Request',
+    content_category: 'Quote',
+    value: 0.00,
+    currency: 'INR'
+  });
+}
+-->
+
+<!-- Track Contact Form (Add to Contact.tsx after successful submission) -->
+<!--
+if (typeof fbq !== 'undefined') {
+  fbq('track', 'Contact', {
+    content_name: 'Contact Form',
+    content_category: 'Contact'
+  });
+}
+-->
